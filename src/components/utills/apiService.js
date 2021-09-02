@@ -16,24 +16,17 @@ const api = {
     return fetchWithErrorHandling(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}&page=1`)
   },
 
-  //api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&query=df&page=1&include_adult=false
-
   fetchMovieById(id) {
     return fetchWithErrorHandling(`${BASE_URL}/movie/${id}?api_key=${API_KEY}`)
   },
-  //api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
 
-  fetchMovieActors(id) {
+  fetchMovieCast(id) {
     return fetchWithErrorHandling(`${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}`)
   },
-
-  //api.themoviedb.org/3/movie/{movie_id}/credits?api_key=<<api_key>>&language=en-US
 
   fetchMovieReviews(id) {
     return fetchWithErrorHandling(`${BASE_URL}/movie/${id}/reviews?api_key=${API_KEY}&page=1`)
   },
-
-  //api.themoviedb.org/3/movie/{movie_id}/reviews?api_key=<<api_key>>&language=en-US&page=1
 }
 
 export default api

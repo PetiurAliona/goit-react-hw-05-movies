@@ -1,28 +1,20 @@
 import api from "../components/utills/apiService"
 import { useState, useEffect } from "react"
-import { Link, useRouteMatch } from "react-router-dom"
+import { useLocation } from "react-router-dom"
+import MoviesList from "../components/MoviesList/MoviesList"
 
 export default function HomePage() {
-  const { url } = useRouteMatch()
   const [movies, setMovies] = useState([])
-  console.log(movies)
+  const location = useLocation()
 
   useEffect(() => {
-    api.fetchMovieTrending().then(setMovies)
+    api.fetchMovieTrending().then(({ results }) => setMovies((prev) => [...prev, ...results]))
   }, [])
 
   return (
     <>
       <h1>Trending today</h1>
-      {movies && (
-        <ul>
-          {movies.map((movie) => (
-            <li key={movie.id}>
-              <Link to={`${url}/${movie.id}`}>{movie.title}</Link>
-            </li>
-          ))}
-        </ul>
-      )}
+      {movies && <MoviesList moviesListData={movies} />}
     </>
   )
 }
