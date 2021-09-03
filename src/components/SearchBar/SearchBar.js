@@ -2,6 +2,7 @@ import { useLocation, useHistory } from "react-router-dom"
 import { useState } from "react"
 
 import { toast } from "react-toastify"
+import styled from "./SearchBar.module.css"
 
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState("")
@@ -24,7 +25,7 @@ const SearchBar = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <button type="submit">
+      <button type="submit" className={styled.buttonSearch}>
         <span>Search</span>
       </button>
 

@@ -1,0 +1,14 @@
+.linkNav {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.linkNav:hover {
+  color: rgba(165, 42, 42, 0.644);
+}
+
+.active {
+  color: brown;
+}

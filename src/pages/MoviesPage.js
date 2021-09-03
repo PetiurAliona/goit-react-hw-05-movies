@@ -12,7 +12,6 @@ const MoviesPage = () => {
   const [movies, setMovies] = useState([])
 
   const queryUrl = new URLSearchParams(location.search).get("query")
-  console.log(queryUrl)
 
   const getMovieByQuery = () => {
     const notifyError = () => toast.error("Images wasn`t found")
@@ -29,6 +28,7 @@ const MoviesPage = () => {
     if (queryUrl) {
       getMovieByQuery()
     }
+    // eslint-disable-next-line
   }, [queryUrl])
 
   return (

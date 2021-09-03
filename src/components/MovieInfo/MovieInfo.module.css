@@ -1,0 +1,28 @@
+.btnGoBack {
+  cursor: pointer;
+  background-color: white;
+  border-color: whitesmoke;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.addInfo {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.addInfo:hover {
+  color: rgba(165, 42, 42, 0.644);
+}
+
+.active {
+  color: brown;
+}
+
+.infoWrapper {
+  display: flex;
+  justify-content: space-between;
+}
