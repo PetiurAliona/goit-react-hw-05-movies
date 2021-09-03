@@ -18,14 +18,15 @@ const Cast = () => {
               <img
                 src={actor.profile_path ? "https://image.tmdb.org/t/p/w500/" + actor.profile_path : null}
                 alt={actor.name}
-                width="150"
-                height="150"
+                width="200"
+                height="300"
               />
               <h3>{actor.name}</h3>
+              <p>Character: {actor.character}</p>
             </li>
           ))
         ) : (
-          <h2>no results</h2>
+          <h2>No results</h2>
         )}
       </ul>
     </>

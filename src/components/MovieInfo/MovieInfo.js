@@ -38,7 +38,7 @@ const MovieInfo = ({ movies }) => {
           </ul>
         </div>
       </div>
-      <div>
+      <div className={styled.addInfoWrapper}>
         <h4>Additional information</h4>
         <NavLink
           className={styled.addInfo}

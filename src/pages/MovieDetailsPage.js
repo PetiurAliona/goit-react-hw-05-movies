@@ -1,11 +1,13 @@
 import { Route } from "react-router-dom"
+import { lazy } from "react"
 
 import api from "../components/utills/apiService"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import Cast from "../components/Cast/Cast"
-import Reviews from "../components/Reviews/Reviews"
 import MovieInfo from "../components/MovieInfo/MovieInfo"
+
+const Cast = lazy(() => import("../components/Cast/Cast" /* webpackChunkName: "cast" */))
+const Reviews = lazy(() => import("../components/Reviews/Reviews" /* webpackChunkName: "reviews" */))
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams()

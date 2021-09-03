@@ -26,3 +26,12 @@
   display: flex;
   justify-content: space-between;
 }
+
+.infoWrapperRight {
+  margin-left: 20px;
+}
+
+.addInfoWrapper {
+  border: 1px solid black;
+  padding-bottom: 10px;
+}
